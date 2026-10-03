@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-spotify-green: #1DB954;
+  --color-spotify-dark: #121212;
+  --color-spotify-dark-sidebar: #000000;
+  --color-spotify-dark-card: #181818;
+  --color-spotify-dark-hover: #282828;
+  --color-spotify-dark-border: #2A2A2A;
+  
+  --color-spotify-light: #F8F9FA;
+  --color-spotify-light-sidebar: #FFFFFF;
+  --color-spotify-light-card: #FFFFFF;
+  --color-spotify-light-hover: #F1F3F5;
+  --color-spotify-light-border: #E5E7EB;
+}
+
+@layer base {
+  :root {
+    --bg-main: var(--color-spotify-light);
+    --bg-sidebar: var(--color-spotify-light-sidebar);
+    --bg-card: var(--color-spotify-light-card);
+    --bg-hover: var(--color-spotify-light-hover);
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --border-color: var(--color-spotify-light-border);
+    --brand-color: var(--color-spotify-green);
+  }
+
+  .dark {
+    --bg-main: var(--color-spotify-dark);
+    --bg-sidebar: var(--color-spotify-dark-sidebar);
+    --bg-card: var(--color-spotify-dark-card);
+    --bg-hover: var(--color-spotify-dark-hover);
+    --text-primary: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --border-color: var(--color-spotify-dark-border);
+    --brand-color: var(--color-spotify-green);
+  }
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 3px solid var(--bg-main);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
+  border-color: var(--bg-main);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+
+:root:not(.dark) ::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-color: var(--bg-main);
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

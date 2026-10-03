@@ -1,0 +1,6 @@
+{
+  "name": "Spotify Music Web Player",
+  "description": "Stream trending music, curated playlists, Hindi & Punjabi hits, Arijit Singh, Yo Yo Honey Singh, and global favorites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
